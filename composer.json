@@ -1,5 +1,6 @@
 {
     "name": "g000m/backstopjsconfig",
+    "version": "1.0.0",
     "type": "library",
     "require": {
         "alc/sitemap-crawler": "^1.0"
