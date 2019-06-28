@@ -1,5 +1,13 @@
 {
+    "name": "g000m/backstopjsconfig",
+    "type": "library",
     "require": {
         "alc/sitemap-crawler": "^1.0"
-    }
+    },
+    "authors": [
+        {
+            "name": "Gabe Herbert",
+            "email": "gh@gabeherbert.com"
+        }
+    ]
 }
