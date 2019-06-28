@@ -1,0 +1,243 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "0bcd6d185b022af8c7965def5891c2e9",
+    "packages": [
+        {
+            "name": "alc/curl",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chemel/curl.git",
+                "reference": "41309bdf48501a0c09e34e7c9cd20c7edf87979a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chemel/curl/zipball/41309bdf48501a0c09e34e7c9cd20c7edf87979a",
+                "reference": "41309bdf48501a0c09e34e7c9cd20c7edf87979a",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Alc\\Curl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexis CHEMEL",
+                    "homepage": "https://github.com/chemel"
+                }
+            ],
+            "description": "Curl Wrapper",
+            "homepage": "https://github.com/chemel/curl",
+            "keywords": [
+                "curl",
+                "http"
+            ],
+            "time": "2017-01-27T19:18:40+00:00"
+        },
+        {
+            "name": "alc/dom-parser-helper",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chemel/dom-parser-helper.git",
+                "reference": "e26eb95f87272b4ad91e73320df755cef1799f87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chemel/dom-parser-helper/zipball/e26eb95f87272b4ad91e73320df755cef1799f87",
+                "reference": "e26eb95f87272b4ad91e73320df755cef1799f87",
+                "shasum": ""
+            },
+            "require": {
+                "alc/curl": "^1.1",
+                "neitanod/forceutf8": "^2.0",
+                "php": ">=5.3.0",
+                "sunra/php-simple-html-dom-parser": "^1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Alc": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexis CHEMEL",
+                    "homepage": "https://github.com/chemel"
+                }
+            ],
+            "description": "PHP Simple HTML DOM Parser Helper",
+            "homepage": "https://github.com/chemel/dom-parser-helper",
+            "keywords": [
+                "dom",
+                "html",
+                "parser"
+            ],
+            "time": "2016-12-07T14:34:41+00:00"
+        },
+        {
+            "name": "alc/sitemap-crawler",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chemel/sitemap-crawler.git",
+                "reference": "a0e0c54a2df17ee0a24cf825a1a664cbc1a4b545"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chemel/sitemap-crawler/zipball/a0e0c54a2df17ee0a24cf825a1a664cbc1a4b545",
+                "reference": "a0e0c54a2df17ee0a24cf825a1a664cbc1a4b545",
+                "shasum": ""
+            },
+            "require": {
+                "alc/dom-parser-helper": "^1.0",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Alc\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexis CHEMEL",
+                    "homepage": "https://github.com/chemel"
+                }
+            ],
+            "description": "Crawl sitemap.xml recursively and return collected urls as array",
+            "homepage": "https://github.com/chemel/sitemap-crawler",
+            "keywords": [
+                "Sitemap",
+                "crawler"
+            ],
+            "time": "2016-12-07T14:54:41+00:00"
+        },
+        {
+            "name": "neitanod/forceutf8",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neitanod/forceutf8.git",
+                "reference": "30980a8ca2787a7730d370eac310b8987eb68229"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neitanod/forceutf8/zipball/30980a8ca2787a7730d370eac310b8987eb68229",
+                "reference": "30980a8ca2787a7730d370eac310b8987eb68229",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ForceUTF8\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastián Grignoli",
+                    "email": "grignoli@gmail.com"
+                }
+            ],
+            "description": "PHP Class Encoding featuring popular Encoding::toUTF8() function --formerly known as forceUTF8()-- that fixes mixed encoded strings.",
+            "homepage": "https://github.com/neitanod/forceutf8",
+            "time": "2018-10-10T23:03:52+00:00"
+        },
+        {
+            "name": "sunra/php-simple-html-dom-parser",
+            "version": "v1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sunra/php-simple-html-dom-parser.git",
+                "reference": "75b9b1cb64502d8f8c04dc11b5906b969af247c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sunra/php-simple-html-dom-parser/zipball/75b9b1cb64502d8f8c04dc11b5906b969af247c6",
+                "reference": "75b9b1cb64502d8f8c04dc11b5906b969af247c6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sunra\\PhpSimple\\HtmlDomParser": "Src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sunra",
+                    "email": "sunra@yandex.ru",
+                    "homepage": "https://github.com/sunra"
+                },
+                {
+                    "name": "S.C. Chen",
+                    "homepage": "http://sourceforge.net/projects/simplehtmldom/"
+                }
+            ],
+            "description": "Composer adaptation of: A HTML DOM parser written in PHP5+ let you manipulate HTML in a very easy way! Require PHP 5+. Supports invalid HTML. Find tags on an HTML page with selectors just like jQuery. Extract contents from HTML in a single line.",
+            "homepage": "https://github.com/sunra/php-simple-html-dom-parser",
+            "keywords": [
+                "dom",
+                "html",
+                "parser"
+            ],
+            "time": "2016-11-22T22:57:47+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
