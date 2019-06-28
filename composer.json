@@ -1,0 +1,5 @@
+{
+    "require": {
+        "alc/sitemap-crawler": "^1.0"
+    }
+}
