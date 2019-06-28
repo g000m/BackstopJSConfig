@@ -1,5 +1,9 @@
 <?php
 
+require __DIR__.'/vendor/autoload.php';
+
+use Alc\SitemapCrawler;
+
 /**
  * @file
  * Contains class BackstopJSConfig.
@@ -88,47 +92,41 @@ class BackstopJSConfig{
     return json_decode($string, TRUE);
   }
 
-  /**
-   * Load SimpleXMLElement from sitemap.xml by given URL.
-   * @return \SimpleXMLElement
-   */
-  private function loadSiteMapXML() {
-    $url = file_get_contents($this->siteMapXMLURL);
-    return new SimpleXMLElement($url);
-  }
 
   /**
    * Load scenarios from sitemap.xml.
    */
-  private function loadScenarios() {
-    $xml = $this->loadSiteMapXML();
-    foreach ($xml as $item) {
-      $page_url = (string) $item->loc;
+	private function loadScenarios() {
+		$crawler = new SitemapCrawler();
 
-      // Getting "title" for the scenario.
-      $parsed_url = parse_url($page_url);
-      $parsed_path = $parsed_url['path'];
-      $parsed_path = explode('/', $parsed_path);
-      $parsed_path = array_values(array_filter($parsed_path));
+		$sitemap = $crawler->crawl( $this->siteMapXMLURL );
 
-      // Get URL title from its path.
-      if (count($parsed_path) > 0) {
-        $parsed_title = $parsed_path[count($parsed_path) - 1];
-        $parsed_title = urldecode($parsed_title);
-        $parsed_title = str_replace(array('-', '_'), ' ', $parsed_title);
-        $page_title = ucwords($parsed_title);
-      }
-      else {
-        $page_title = "Home page";
-      }
+		foreach ( $sitemap as $item ) {
+			$page_url = (string) $item->getUrl();
 
-      // Creating scenario based on item from site map.
-      $scenario = $this->getDefaultScenario();
-      $scenario->label = $page_title;
-      $scenario->url = $page_url;
-      $this->scenarios[] = $scenario;
-    }
-  }
+			// Getting "title" for the scenario.
+			$parsed_url  = parse_url( $page_url );
+			$parsed_path = $parsed_url['path'];
+			$parsed_path = explode( '/', $parsed_path );
+			$parsed_path = array_values( array_filter( $parsed_path ) );
+
+			// Get URL title from its path.
+			if ( count( $parsed_path ) > 0 ) {
+				$parsed_title = $parsed_path[ count( $parsed_path ) - 1 ];
+				$parsed_title = urldecode( $parsed_title );
+				$parsed_title = str_replace( array( '-', '_' ), ' ', $parsed_title );
+				$page_title   = ucwords( $parsed_title );
+			} else {
+				$page_title = "Home page";
+			}
+
+			// Creating scenario based on item from site map.
+			$scenario          = $this->getDefaultScenario();
+			$scenario->label   = $page_title;
+			$scenario->url     = $page_url;
+			$this->scenarios[] = $scenario;
+		}
+	}
 
   /**
    * Generate JSON config file based on loaded input.
